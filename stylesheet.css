@@ -8,6 +8,10 @@ div{
 .sidebar{
     flex: 1;
     color: red;
+    
+}
+.hidden{
+   display: none;
 }
 .box{
     display: flex;
