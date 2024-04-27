@@ -1,0 +1,40 @@
+div{
+    border: 1px solid black;
+}
+.big-box{
+    display: flex;
+
+}
+.sidebar{
+    flex: 1;
+    color: red;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-between;
+    flex: 2;
+    
+}
+
+.book-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.card{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.card h3{
+    align-self: end;    
+    margin-right: 30px;
+    
+}
+button{
+    width: 200px;
+    align-self: center;
+}
