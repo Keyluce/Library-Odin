@@ -33,17 +33,30 @@ myLibrary.forEach(function (book) {
     d = document.createElement("h3");
     d.textContent = book.pages + " pages";
     bookContainer.appendChild(a);
-
     a.appendChild(b);
     a.appendChild(c);
     a.appendChild(d);
+    let e = document.createElement("button");
+    e.classList.add("delete");
+    e.textContent = "Delete";
+    a.appendChild(e);
 });
 
 const button = document.querySelector(".new-book-button");
 const sidebar = document.querySelector(".sidebar");
 const submit = document.querySelector(".sidebar button[type=submit]");
 submit.addEventListener("click", submitEvent);
+const deleteButtons = document.querySelectorAll(".delete");
+deleteButtons.forEach(function(button)
+{
+    button.addEventListener("click", deleteBook);
+});
 
+function deleteBook(event)
+{
+    let parent = event.target.parentElement;
+    bookContainer.removeChild(parent);
+}
 function submitEvent(event) {
     event.preventDefault();
     let title = document.querySelector("form input[id='title'");
@@ -61,10 +74,16 @@ function submitEvent(event) {
     d = document.createElement("h3");
     d.textContent = pages.value + " pages";
     bookContainer.appendChild(a);
+    
 
     a.appendChild(b);
     a.appendChild(c);
     a.appendChild(d);
+    let e = document.createElement("button");
+    e.classList.add("delete");
+    e.textContent = "Delete";
+    e.addEventListener("click", deleteBook);
+    a.appendChild(e);
 
 }
 button.addEventListener("click", () => {
