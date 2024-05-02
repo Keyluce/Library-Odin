@@ -7,8 +7,13 @@ div{
 }
 .sidebar{
     flex: 1;
-    color: red;
-    
+    padding: 10px;
+    border: 5px solid purple;
+ 
+}
+.sidebar input[id="pages"]
+{
+    margin-bottom: 10px;
 }
 .hidden{
    display: none;
@@ -16,7 +21,6 @@ div{
 .box{
     display: flex;
     flex-direction: column;
-    height: 90vh;
     justify-content: space-between;
     flex: 2;
     
@@ -38,7 +42,7 @@ div{
     margin-right: 30px;
     
 }
-button{
+.new-book-button{
     width: 200px;
     align-self: center;
 }

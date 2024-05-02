@@ -12,13 +12,26 @@
 <body>
     <div class="big-box">
         <div class="sidebar hidden">
-
+            <form action="" method="post">
+                <label for="title" style="margin-right: 80px;">Title: </label>
+                <input type="text" id="title" >
+                <br>
+                <label for="author" style="margin-right: 65px;">Author: </label>
+                <input type="text" id="author">
+                <br>
+                <label for="pages">Number of pages: </label>
+                <input type="text" id="pages">
+                <br>
+                
+                <button type="submit">Submit</button>
+                
+            </form>
         </div>
         <div class="box">
             <div class="book-container">
 
             </div>
-            <button>New Book</button>
+            <button class="new-book-button">New Book</button>
         </div>
     </div>
 </body>
