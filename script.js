@@ -20,12 +20,11 @@ function deleteBook(event)
     myLibrary.splice(parent.getAttribute("index"),1);
     let indexDelete = Number(parent.getAttribute("index"));
     let toDelete = document.querySelector(`div[index='${indexDelete}'`);
-    console.log(indexDelete + 1);
-    console.log(myLibrary.length + 1);
+   
     bookContainer.removeChild(toDelete);
     for (let i = (indexDelete + 1); i < (myLibrary.length + 1); i++)
     {
-        console.log("Hi");
+      
         let toAdjust = document.querySelector(`div[index='${i}'`);
         toAdjust.setAttribute("index", i-1);
     }
@@ -36,7 +35,7 @@ function readButton(event)
 {
     let button = event.target;
     let parent = button.parentElement;
-    console.log(button);
+   
     button.classList.toggle("green");
     let indexBox = parent.getAttribute(`index`);
     myLibrary[indexBox].read = button.classList.contains("green") ? true : false; 
@@ -46,11 +45,11 @@ function submitEvent(event) {
 
     
     let title = document.querySelector("form input[id='title'");
-    console.log(title.value);
+  
     let author = document.querySelector("form input[id='author'");
-    console.log(author.value);
+  
     let pages = document.querySelector("form input[id='pages'");
-    console.log(pages.value);
+   
 
     myLibrary.push(new Book(title.value,author.value,pages.value));
 
